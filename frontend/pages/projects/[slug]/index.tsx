@@ -4,38 +4,11 @@ import { client } from '../../../src/services/apollo-client';
 
 import styles from './style.module.css'
 import { getProjectBySlugQuery } from '../../../src/queries/projects';
-
-interface InfoBlock {
-  id: string
-  Title: string
-  Description: string
-}
-
-interface OrderedList {
-  id: string
-  ListItem: string
-}
-
-interface Action {
-  id: string
-  Title: string
-  Description: string
-  InfoBlock: InfoBlock[]
-  OrderedList: OrderedList[]
-}
-
-interface Project {
-  id: string
-  ProjectName: string
-  Period: string
-  Slogan: string
-  Short_description: string
-  Role: string
-  Duration: string
-  Actions: Action[]
-}
+import type { Project } from '../../../src/types/project';
+import { availablePageBlocks } from '../../../src/components/PageBlock';
 
 const Project = ({ project }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  console.log("🚀 ~ Project ~ project:", project)
   if (!project) {
     return (<p>Loading...</p>)
   }
@@ -62,41 +35,8 @@ const Project = ({ project }: InferGetStaticPropsType<typeof getStaticProps>) =>
           </div>
         </div>
       </section>
+      {project.PageBlocks.map((block) => availablePageBlocks(block))}
       
-      <section>
-        {project.Actions.map((action) => {
-          if (action.OrderedList.length > 0) {
-            return (
-              <ol>
-                {action.OrderedList.map((item) => (
-                  <li key={`OrderedListItem-${item.id}`}>
-                    {item.ListItem}
-                  </li>
-                ))}
-              </ol>
-            )
-          }
-
-          if (action.InfoBlock.length > 0) {
-            return (
-              <ul>
-                {action.InfoBlock.map((infoBlock) => (
-                  <li key={`InfoBlockItem-${infoBlock.id}`}>
-                    {infoBlock.Title} - {infoBlock.Description}
-                  </li>
-                ))}
-              </ul>
-            )
-          }
-
-          return (
-            <div key={`action-${action.id}`} className={styles.grid}>
-              <div>{action.Title}</div>
-              <div>{action.Description}</div>
-            </div>
-          )
-        })}
-      </section>
     </div>
   )
 }

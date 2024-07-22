@@ -13,18 +13,65 @@ export const getProjectBySlugQuery = gql`
           Short_description
           Role
           Duration
-          Actions {
-            id
-            Title
-            Description
-            OrderedList {
+          PageBlocks {
+            __typename
+            ... on ComponentPageBlocksSection {
               id
-              ListItem
-            }
-            InfoBlock {
-              id
+              Name
               Title
-              Description
+              Text
+            }
+            ... on ComponentPageBlocksSubSections {
+              id
+              SubsectionTitle
+              SubsectionText
+            }
+            ... on ComponentPageBlocksOrderedList {
+              id
+              OrderedList {
+                id
+                Item
+              }
+            }
+            ... on ComponentPageBlocksInfoBlockSection {
+              id
+              InfoBlock {
+                id
+                Title
+                Text
+              }
+            }
+            ... on ComponentPageBlocksTableSection {
+              id
+              LeftTableName
+              LeftTable {
+                id
+                Item
+              }
+              RightTableName
+              RightTable {
+                id
+                Item
+              }
+            }
+            ... on ComponentPageBlocksInfoCardSection {
+              id
+              InfoCard {
+                id
+                Text
+              }
+            }
+            ... on Error {
+              message
+            }
+          }
+          localizations {
+            data {
+              id
+              attributes {
+                Slogan
+                locale
+              }
             }
           }
         }

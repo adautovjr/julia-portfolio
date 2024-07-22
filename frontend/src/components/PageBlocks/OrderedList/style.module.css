@@ -1,0 +1,16 @@
+.container1290 {
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-column-gap: 60px;
+  grid-row-gap: 60px;
+  grid-template-rows: auto(1fr);
+  grid-template-columns: auto;
+  margin: 0 0 50px 0;
+}
