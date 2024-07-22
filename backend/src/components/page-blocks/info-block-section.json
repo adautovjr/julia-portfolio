@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_blocks_info_block_sections",
+  "info": {
+    "displayName": "InfoBlockSection",
+    "icon": "database"
+  },
+  "options": {},
+  "attributes": {
+    "InfoBlock": {
+      "displayName": "InfoBlock",
+      "type": "component",
+      "repeatable": true,
+      "component": "page-blocks.info-block"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_blocks_sub_sections",
+  "info": {
+    "displayName": "SubSections",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "SubsectionTitle": {
+      "type": "string"
+    },
+    "SubsectionText": {
+      "type": "text"
+    }
+  }
+}

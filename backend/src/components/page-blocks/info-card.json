@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_page_blocks_info_cards",
+  "info": {
+    "displayName": "InfoCard",
+    "icon": "message"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string"
+    }
+  }
+}

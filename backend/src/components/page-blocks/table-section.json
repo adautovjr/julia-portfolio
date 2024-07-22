@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_page_blocks_table_sections",
+  "info": {
+    "displayName": "TableSection",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "LeftTableName": {
+      "type": "string"
+    },
+    "LeftTable": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-blocks.table"
+    },
+    "RightTableName": {
+      "type": "string"
+    },
+    "RightTable": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-blocks.table"
+    }
+  }
+}

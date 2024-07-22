@@ -1,15 +1,15 @@
 {
-  "collectionName": "components_action_info_blocks",
+  "collectionName": "components_page_blocks_info_blocks",
   "info": {
     "displayName": "InfoBlock",
-    "icon": "layer"
+    "icon": "cube"
   },
   "options": {},
   "attributes": {
     "Title": {
       "type": "string"
     },
-    "Description": {
+    "Text": {
       "type": "string"
     }
   }

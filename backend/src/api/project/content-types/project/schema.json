@@ -88,33 +88,6 @@
         }
       }
     },
-    "Mission": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
-    "Mission_description": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text"
-    },
-    "Actions": {
-      "displayName": "Actions",
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "action.actions"
-    },
     "Period": {
       "pluginOptions": {
         "i18n": {
@@ -132,6 +105,22 @@
       "type": "string",
       "unique": false,
       "required": true
+    },
+    "PageBlocks": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "dynamiczone",
+      "components": [
+        "page-blocks.section",
+        "page-blocks.sub-sections",
+        "page-blocks.ordered-list",
+        "page-blocks.info-card-section",
+        "page-blocks.info-block-section",
+        "page-blocks.table-section"
+      ]
     }
   }
 }

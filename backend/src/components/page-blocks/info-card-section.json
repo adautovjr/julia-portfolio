@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_blocks_info_card_sections",
+  "info": {
+    "displayName": "InfoCardSection",
+    "icon": "monitor"
+  },
+  "options": {},
+  "attributes": {
+    "InfoCard": {
+      "displayName": "InfoCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "page-blocks.info-card"
+    }
+  }
+}

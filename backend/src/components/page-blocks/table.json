@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_page_blocks_tables",
+  "info": {
+    "displayName": "Table",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Item": {
+      "type": "string"
+    }
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "collectionName": "components_action_ordered_lists",
+  "collectionName": "components_page_blocks_lists",
   "info": {
-    "displayName": "OrderedList",
+    "displayName": "List",
     "icon": "bulletList"
   },
   "options": {},
   "attributes": {
-    "ListItem": {
+    "Item": {
       "type": "string"
     }
   }

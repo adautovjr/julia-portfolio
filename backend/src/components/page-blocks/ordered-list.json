@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_page_blocks_ordered_lists",
+  "info": {
+    "displayName": "OrderedListSection",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "OrderedList": {
+      "displayName": "List",
+      "type": "component",
+      "repeatable": true,
+      "component": "page-blocks.list"
+    }
+  }
+}
