@@ -13,3 +13,5 @@ docker-compose.yml
 nginx/
 node-modules
 node-modules/
+.strapi
+.strapi/
