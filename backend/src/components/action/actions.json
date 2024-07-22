@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_action_actions",
+  "info": {
+    "displayName": "Actions"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "OrderedList": {
+      "displayName": "OrderedList",
+      "type": "component",
+      "repeatable": true,
+      "component": "action.ordered-list"
+    },
+    "InfoBlock": {
+      "displayName": "InfoBlock",
+      "type": "component",
+      "repeatable": true,
+      "component": "action.info-block"
+    }
+  }
+}

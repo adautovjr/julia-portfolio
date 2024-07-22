@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_action_ordered_lists",
+  "info": {
+    "displayName": "OrderedList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "ListItem": {
+      "type": "string"
+    }
+  }
+}

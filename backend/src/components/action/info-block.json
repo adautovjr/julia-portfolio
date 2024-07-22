@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_action_info_blocks",
+  "info": {
+    "displayName": "InfoBlock",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    }
+  }
+}
