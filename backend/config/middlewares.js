@@ -1,5 +1,5 @@
 module.exports = ({ env }) => {
-  console.log("🚀 ~ env:", env)
+  console.log("🚀 ~ env:", env('STRAPI_ADMIN_BACKEND_URL'))
 
   return [
   'strapi::errors',
@@ -34,7 +34,7 @@ module.exports = ({ env }) => {
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       keepHeaderOnError: true,
     },
-  },,
+  },
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
