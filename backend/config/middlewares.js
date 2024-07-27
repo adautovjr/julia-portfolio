@@ -1,5 +1,5 @@
 module.exports = ({ env }) => {
-  console.log("🚀 ~ env:", env('STRAPI_ADMIN_BACKEND_URL'))
+  console.log("🚀 ~ env:", env('STRAPI_ADMIN_BACKEND_URI'))
 
   return [
   'strapi::errors',
@@ -9,7 +9,7 @@ module.exports = ({ env }) => {
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'connect-src': ["'self'", 'https:', 'http:', `${env('STRAPI_ADMIN_BACKEND_URL')}`],
+          'connect-src': ["'self'", 'https:', 'http:', `${env('STRAPI_ADMIN_BACKEND_URI')}`],
           'img-src': [
             "'self'",
             'data:',
@@ -29,7 +29,7 @@ module.exports = ({ env }) => {
   {
     name: 'strapi::cors',
     config: {
-      origin: [`${env('STRAPI_ADMIN_BACKEND_URL')}`],
+      origin: [`${env('STRAPI_ADMIN_BACKEND_URI')}`],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       keepHeaderOnError: true,
