@@ -16,7 +16,7 @@ COPY ./.env /app/
 ENV PATH /app/node_modules/.bin:$PATH
 
 # Install dependencies in /app
-RUN yarn config set network-timeout 600000 -g && yarn install
+RUN yarn config set network-timeout 600000 -g && yarn install --force
 
 # Copy the rest of our Strapi folder into /app
 COPY ./backend /app
