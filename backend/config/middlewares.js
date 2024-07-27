@@ -29,7 +29,7 @@ module.exports = ({ env }) => {
   {
     name: 'strapi::cors',
     config: {
-      origin: [`${env('STRAPI_ADMIN_BACKEND_URI')}/`, "*"],
+      origin: '*',
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       keepHeaderOnError: true,
