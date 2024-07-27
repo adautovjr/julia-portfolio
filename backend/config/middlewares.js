@@ -4,8 +4,21 @@ module.exports = ({ env }) => [
     name: 'strapi::security',
     config: {
       contentSecurityPolicy: {
+        useDefaults: true,
         directives: {
-          'connect-src': ["'self'", `${env('STRAPI_ADMIN_BACKEND_URL')}`],
+          'connect-src': ["'self'", 'https:', 'http:', `${env('STRAPI_ADMIN_BACKEND_URL')}`],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+          ],
         },
       }
     },
